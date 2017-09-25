@@ -13,6 +13,7 @@ public class Sum {
             inputNumber = inputNumber/10;
         }
 
+
         System.out.println("The sum of the arguments " + x +" = " + sum);
 
 
