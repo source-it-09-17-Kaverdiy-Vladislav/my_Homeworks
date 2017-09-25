@@ -1,6 +1,8 @@
 package Home.Work2;
 
+
 import java.io.IOException;
+
 
 public class Demo {
     public static void main(String[] args) throws IOException {
@@ -17,5 +19,10 @@ public class Demo {
         NamesOfTheMonths months = new NamesOfTheMonths();
         months.getNamesOfTheMonths();
 
+        NamesOfTheMonths_2 months_2 = new NamesOfTheMonths_2();
+        months_2.getNamesOfTheMonths_2();
+
     }
 }
+
+
