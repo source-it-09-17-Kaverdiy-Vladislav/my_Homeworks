@@ -18,7 +18,7 @@ public class Palindrom2 {
         String [] numbers = in.split("");
         String rev = new StringBuffer(in).reverse().toString();
 
-        for (int i = 0; i < numbers.length ; i++) {
+        for (int i = 0; i < 1 ; i++) {
 
             if(in.equals(rev)){
                 System.out.println(in + " = is palindrom!");

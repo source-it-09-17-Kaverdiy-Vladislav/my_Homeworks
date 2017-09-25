@@ -14,6 +14,8 @@ public class Demo {
         Palindrom2 palindrom2 = new Palindrom2();
         palindrom2.getPalindrom2();
 
+        NamesOfTheMonths months = new NamesOfTheMonths();
+        months.getNamesOfTheMonths();
 
     }
 }
