@@ -12,7 +12,7 @@ public class NamesOfTheMonths_2 {
     public void getNamesOfTheMonths_2() throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+        int [] list = new int[1];
         number = Integer.parseInt(reader.readLine());
 
         Integer[] sourceNumbers = new Integer[number];
@@ -24,7 +24,7 @@ public class NamesOfTheMonths_2 {
             sourceNumbers[i] = Integer.parseInt(reader.readLine());
 
 
-            if (sourceNumbers[0] == 1) {
+           if (sourceNumbers[0] == 1) {
                 System.out.println("January");
 
             }else if (sourceNumbers[0] == 2) {

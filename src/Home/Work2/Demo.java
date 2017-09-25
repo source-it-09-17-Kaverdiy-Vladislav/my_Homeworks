@@ -22,6 +22,8 @@ public class Demo {
         NamesOfTheMonths_2 months_2 = new NamesOfTheMonths_2();
         months_2.getNamesOfTheMonths_2();
 
+        NamesOfTheMonths_3 months_3 = new NamesOfTheMonths_3();
+        months_3.getNamesOfTheMonths_3();
     }
 }
 
