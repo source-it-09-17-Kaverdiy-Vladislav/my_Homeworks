@@ -1,6 +1,16 @@
 package HomeWork4.Cars;
 
 public class Porsche extends Car {
+
+    private static int NumberOfCars;
+    private static int NumberOfSportCars;
+
+    static{
+        NumberOfCars = 0;
+        NumberOfSportCars = 0;
+    }
+
+
     private String color;
     private int speed;
     private int weight;
@@ -8,14 +18,107 @@ public class Porsche extends Car {
     private String model;
 
 
+
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getSpeed() {
+        if(speed != 0){
+
+    }return speed;
+}
+
+    public Porsche setSpeed(int speed) {
+
+        this.speed = speed;
+        return this;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getVolumeOfMotor() {
+        return VolumeOfMotor;
+    }
+
+    public void setVolumeOfMotor(int volumeOfMotor) {
+        VolumeOfMotor = volumeOfMotor;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Porsche setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public Porsche setModel() {
+        this.model = "Unknown";
+        return this;
+    }
+
+    public Porsche setSpeed() {
+        if (isCountValid(speed)) {
+            speed = speed;
+        }
+        return this;
+    }
+
+    private boolean isCountValid(int speed) {
+        return speed >= 0;
+    }
+    public Porsche setManufacturer() {
+        this.manufacturer = "Unknown";
+        return this;
+    }
+
+
+    public Porsche setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public Porsche(String color, int speed, int weight, int volumeOfMotor, String model) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+        VolumeOfMotor = volumeOfMotor;
+        this.model = model;
+    }
+
+    public Porsche(String color, int speed, int weight, int volumeOfMotor) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+        VolumeOfMotor = volumeOfMotor;
+    }
+
+    public Porsche(String color, int speed, int weight) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Override
     public void getColor(String s) {
+
         super.getColor("red");
     }
-    @Override
-    public void getModel(String s) {
-        super.getColor("Cayenne");
-    }
+
 
 
     @Override
@@ -56,69 +159,5 @@ public class Porsche extends Car {
         result = 31 * result + VolumeOfMotor;
         result = 31 * result + model.hashCode();
         return result;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getSpeed() {
-        if(speed != 0){
-
-    }return speed;
-}
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getVolumeOfMotor() {
-        return VolumeOfMotor;
-    }
-
-    public void setVolumeOfMotor(int volumeOfMotor) {
-        VolumeOfMotor = volumeOfMotor;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-
-    public Porsche(String color, int speed, int weight, int volumeOfMotor, String model) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-        VolumeOfMotor = volumeOfMotor;
-        this.model = model;
-    }
-
-    public Porsche(String color, int speed, int weight, int volumeOfMotor) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-        VolumeOfMotor = volumeOfMotor;
-    }
-
-    public Porsche(String color, int speed, int weight) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
     }
 }

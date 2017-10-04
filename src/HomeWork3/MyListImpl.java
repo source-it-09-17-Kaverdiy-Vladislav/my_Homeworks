@@ -1,6 +1,6 @@
 package HomeWork3;
 
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.*;
 
@@ -31,23 +31,23 @@ public class MyListImpl implements MyList<Person> {
         return false;
     }
 
-    @NotNull
+
     @Override
     public Iterator<Person> iterator() {
 
         return null;
     }
 
-    @NotNull
+
     @Override
     public Object[] toArray() {
 
         return arr;
     }
 
-    @NotNull
+
     @Override
-    public <T> T[] toArray(@NotNull T[] a) {
+    public <T> T[] toArray( T[] a) {
         return null;
     }
 
@@ -67,27 +67,27 @@ public class MyListImpl implements MyList<Person> {
     }
 
     @Override
-    public boolean containsAll(@NotNull Collection<?> c) {
+    public boolean containsAll( Collection<?> c) {
         return false;
     }
 
     @Override
-    public boolean addAll(@NotNull Collection<? extends Person> c) {
+    public boolean addAll( Collection<? extends Person> c) {
         return false;
     }
 
     @Override
-    public boolean addAll(int index, @NotNull Collection<? extends Person> c) {
+    public boolean addAll(int index,  Collection<? extends Person> c) {
         return false;
     }
 
     @Override
-    public boolean removeAll(@NotNull Collection<?> c) {
+    public boolean removeAll( Collection<?> c) {
         return false;
     }
 
     @Override
-    public boolean retainAll(@NotNull Collection<?> c) {
+    public boolean retainAll( Collection<?> c) {
         return false;
     }
 
@@ -127,19 +127,19 @@ public class MyListImpl implements MyList<Person> {
         return 0;
     }
 
-    @NotNull
+
     @Override
     public ListIterator<Person> listIterator() {
         return null;
     }
 
-    @NotNull
+
     @Override
     public ListIterator<Person> listIterator(int index) {
         return null;
     }
 
-    @NotNull
+
     @Override
     public List<Person> subList(int fromIndex, int toIndex) {
         return null;

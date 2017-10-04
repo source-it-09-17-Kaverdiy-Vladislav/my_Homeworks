@@ -1,6 +1,17 @@
 package HomeWork4.Cars;
 
 public class BMW extends Car {
+
+
+private static int NumberOfCars;
+private static int NumberOfSportCars;
+
+static{
+    NumberOfCars = 0;
+    NumberOfSportCars = 0;
+}
+
+
     private String color;
     private int speed;
     private int weight;
@@ -9,29 +20,103 @@ public class BMW extends Car {
 
 
 
+
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+        color = "Blue";
+    }
+
+    public int getSpeed() {
+        if(speed != 0){
+
+    }return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public BMW setWeight(int weight) {
+        this.weight = weight;
+        return this;
+    }
+
+    public int getVolumeOfMotor() {
+        return VolumeOfMotor;
+    }
+
+    public void setVolumeOfMotor(int volumeOfMotor) {
+        VolumeOfMotor = volumeOfMotor;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public BMW setModel(String model) {
+        this.model = model;
+        return this;
+    }
+
+    public BMW setSpeed() {
+        if (isCountValid(speed)) {
+            speed = speed;
+        }
+        return this;
+    }
+
+    private boolean isCountValid(int speed) {
+        return speed >= 0;
+    }
+
+    public BMW setManufacturer() {
+        this.manufacturer = "Unknown";
+        return this;
+    }
+    public BMW setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+    public BMW setModel() {
+        this.model = "Unknown";
+        return this;
+    }
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public BMW(String color, int speed, int weight) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+    }
+
+    public BMW(String color, int speed) {
+        this.color = color;
+        this.speed = speed;
+    }
+
+    public BMW(String color) {
+        this.color = color;
+    }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     @Override
     public void getColor(String s) {
+
         super.getColor("black");
-    }
-    @Override
-    public void getModel(String s) {
-        super.getColor("X5");
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
-
-    @Override
-    public String toString() {
-        return "BMW{" +
-                "color='" + color + '\'' +
-                ", speed=" + speed +
-                ", weight=" + weight +
-                ", VolumeOfMotor=" + VolumeOfMotor +
-                ", model='" + model + '\'' +
-                '}';
     }
 
     @Override
@@ -58,60 +143,20 @@ public class BMW extends Car {
         return result;
     }
 
-    public String getColor() {
-        return color;
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getSpeed() {
-        if(speed != 0){
-
-    }return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getVolumeOfMotor() {
-        return VolumeOfMotor;
-    }
-
-    public void setVolumeOfMotor(int volumeOfMotor) {
-        VolumeOfMotor = volumeOfMotor;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public BMW(String color, int speed, int weight) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-    }
-
-    public BMW(String color, int speed) {
-        this.color = color;
-        this.speed = speed;
-    }
-
-    public BMW(String color) {
-        this.color = color;
+    @Override
+    public String toString() {
+        return "BMW{" +
+                "color='" + color + '\'' +
+                ", speed=" + speed +
+                ", weight=" + weight +
+                ", VolumeOfMotor=" + VolumeOfMotor +
+                ", model='" + model + '\'' +
+                '}';
     }
 }
+
