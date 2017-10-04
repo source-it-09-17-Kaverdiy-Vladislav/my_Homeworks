@@ -95,7 +95,9 @@ static{
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
+    public BMW(){
 
+    }
     public BMW(String color, int speed, int weight) {
         this.color = color;
         this.speed = speed;
@@ -166,13 +168,16 @@ static{
 
 
     @Override
-    public void RepairEngine() {
-
+    public boolean RepairEngine() {
+        System.out.println("Repair engine");
+        return false;
     }
 
     @Override
-    public void ReplacementWheels() {
+    public boolean ReplacementWheels() {
+        System.out.println("ReplacementWheels");
 
+        return false;
     }
 }
 

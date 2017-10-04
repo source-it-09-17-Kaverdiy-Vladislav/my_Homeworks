@@ -1,8 +1,10 @@
 package HomeWork4.Cars;
 
+import HomeWork4.carService.CarService;
+
 import java.math.BigInteger;
 
-public class Car {
+public class Car implements CarService{
     protected String color;
     protected BigInteger speed;
     protected String manufacturer;
@@ -19,6 +21,16 @@ public class Car {
     }
 
 
+    @Override
+    public boolean RepairEngine() {
+        System.out.println("Repair engine");
+        return false;
+    }
 
+    @Override
+    public boolean ReplacementWheels() {
+        System.out.println("ReplacementWheels");
 
+        return false;
+    }
 }

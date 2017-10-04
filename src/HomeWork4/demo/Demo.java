@@ -3,6 +3,7 @@ package HomeWork4.demo;
 import HomeWork4.Cars.BMW;
 import HomeWork4.Cars.Car;
 import HomeWork4.Cars.Porsche;
+import HomeWork4.carService.CarFactory;
 import HomeWork4.utils.Checker;
 
 import java.util.ArrayList;
@@ -32,7 +33,9 @@ public class Demo extends Car {
         ((Porsche)porsche).setSpeed(220);
         System.out.println(porsche);
 
-
+        CarFactory carFactory = new CarFactory();
+        Car car = carFactory.getCar(bmw);
+        System.out.println(car instanceof BMW);
 
     }
 }

@@ -93,6 +93,9 @@ public class Porsche extends Car implements CarService {
     }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    public Porsche(){
+
+}
 
     public Porsche(String color, int speed, int weight, int volumeOfMotor, String model) {
         this.color = color;
@@ -165,12 +168,14 @@ public class Porsche extends Car implements CarService {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @Override
-    public void RepairEngine() {
+    public boolean RepairEngine() {
 
+        return false;
     }
 
     @Override
-    public void ReplacementWheels() {
+    public boolean ReplacementWheels() {
 
+        return false;
     }
 }
