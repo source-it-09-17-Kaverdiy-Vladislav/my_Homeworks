@@ -1,6 +1,8 @@
 package HomeWork4.Cars;
 
-public class BMW extends Car {
+import HomeWork4.carService.CarService;
+
+public class BMW extends Car implements CarService {
 
 
 private static int NumberOfCars;
@@ -157,6 +159,20 @@ static{
                 ", VolumeOfMotor=" + VolumeOfMotor +
                 ", model='" + model + '\'' +
                 '}';
+    }
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    @Override
+    public void RepairEngine() {
+
+    }
+
+    @Override
+    public void ReplacementWheels() {
+
     }
 }
 

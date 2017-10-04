@@ -1,6 +1,8 @@
 package HomeWork4.Cars;
 
-public class Porsche extends Car {
+import HomeWork4.carService.CarService;
+
+public class Porsche extends Car implements CarService {
 
     private static int NumberOfCars;
     private static int NumberOfSportCars;
@@ -159,5 +161,16 @@ public class Porsche extends Car {
         result = 31 * result + VolumeOfMotor;
         result = 31 * result + model.hashCode();
         return result;
+    }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    @Override
+    public void RepairEngine() {
+
+    }
+
+    @Override
+    public void ReplacementWheels() {
+
     }
 }
