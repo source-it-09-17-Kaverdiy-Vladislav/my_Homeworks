@@ -1,4 +1,4 @@
-package Third_package;
+package HomeWork1;
 
 public class Sum {
     public static void main(String[] args) {

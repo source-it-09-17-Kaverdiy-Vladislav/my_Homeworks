@@ -11,11 +11,13 @@ public class MyListImpl implements MyList<Person> {
 
     @Override
     public int size() {
+
         return arr.length;
     }
 
     @Override
     public boolean isEmpty() {
+
         return arr.length == 0;
     }
 
@@ -35,7 +37,7 @@ public class MyListImpl implements MyList<Person> {
     @Override
     public Iterator<Person> iterator() {
 
-        return null;
+        return Arrays.stream(arr).iterator();
     }
 
 
@@ -63,8 +65,22 @@ public class MyListImpl implements MyList<Person> {
     @Override
     public boolean remove(Object o) {
 
-        return false;
+        if (!(o instanceof Person)) {
+            return false;
+        }
+        Person[] firstArr = null;
+        for (int i = 0; i < arr.length; i++) {
+            Person item = arr[i];
+            if (item != null && item.equals(o)) {
+                firstArr = new Person[arr.length - 1];
+                System.arraycopy(arr, 0, firstArr, 0, i);
+                System.arraycopy(arr, i + 1, firstArr, i, arr.length - i - 1);
+                arr = firstArr;
+            }
+        }
+        return firstArr != null;
     }
+
 
     @Override
     public boolean containsAll( Collection<?> c) {
