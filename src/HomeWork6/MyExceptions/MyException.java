@@ -1,4 +1,4 @@
 package HomeWork6.MyExceptions;
 
-public class MyException extends Throwable {
+public class MyException extends Exception{
 }
