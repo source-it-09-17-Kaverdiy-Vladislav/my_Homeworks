@@ -8,6 +8,7 @@ public class TestException implements MyInterface {
     @Override
     public void getName() {
         try {
+            System.out.println("Vlad");
 
         }catch (DataBindingException e){
             e.printStackTrace();
@@ -17,6 +18,7 @@ public class TestException implements MyInterface {
     @Override
     public void getSurname() {
         try{
+            System.out.println("Kaverdiy");
             throw  new MyException();
         }catch (MyException ex){
 
