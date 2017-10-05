@@ -8,10 +8,12 @@ public class BMW extends Car implements CarService {
 private static int NumberOfCars;
 private static int NumberOfSportCars;
 
+
 static{
     NumberOfCars = 0;
     NumberOfSportCars = 0;
 }
+
 
 
     public enum CarType {
@@ -179,5 +181,7 @@ BMW_X5, BMW_I8, BMW_M6
         System.out.println("Car BMW drawing");
 
     }
+
+
 }
 
