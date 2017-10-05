@@ -14,6 +14,11 @@ static{
 }
 
 
+    public enum CarType {
+BMW_X5, BMW_I8, BMW_M6
+}
+
+
     private String color;
     private int speed;
     private int weight;
@@ -21,8 +26,25 @@ static{
     private String model;
 
 
+    public BMW(){
 
+    }
+    public BMW(String color, int speed, int weight) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+    }
 
+    public BMW(String color, int speed) {
+        this.color = color;
+        this.speed = speed;
+    }
+
+    public BMW(String color) {
+        this.color = color;
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public String getColor() {
         return color;
@@ -30,7 +52,7 @@ static{
 
     public void setColor(String color) {
         this.color = color;
-        color = "Blue";
+
     }
 
     public int getSpeed() {
@@ -94,24 +116,6 @@ static{
     }
 
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    public BMW(){
-
-    }
-    public BMW(String color, int speed, int weight) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-    }
-
-    public BMW(String color, int speed) {
-        this.color = color;
-        this.speed = speed;
-    }
-
-    public BMW(String color) {
-        this.color = color;
-    }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -162,22 +166,16 @@ static{
                 ", model='" + model + '\'' +
                 '}';
     }
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @Override
-    public boolean RepairEngine() {
-        System.out.println("Repair engine");
-        return false;
+    public void repair() {
+        System.out.println("Car BMW repairing");
     }
 
     @Override
-    public boolean ReplacementWheels() {
-        System.out.println("ReplacementWheels");
-
-        return false;
+    public void draw() {
+        System.out.println("Car BMW drawing");
     }
 }
 

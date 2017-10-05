@@ -34,8 +34,26 @@ public class Demo extends Car {
         System.out.println(porsche);
 
         CarFactory carFactory = new CarFactory();
-        Car car = carFactory.getCar(bmw);
-        System.out.println(car instanceof BMW);
 
+
+       Car car1 = carFactory.getCar("CAR");
+
+       car1.draw();
+       car1.repair();
+        System.out.println(car1 instanceof Car);
+
+        Car car2 = carFactory.getCar("BMW");
+
+        car2.draw();
+        car2.repair();
+        System.out.println(car2 instanceof BMW);
+
+        Car car3 = carFactory.getCar("PORSCHE");
+
+        car3.draw();
+        car3.repair();
+        System.out.println(car3 instanceof Porsche);
     }
 }
+
+

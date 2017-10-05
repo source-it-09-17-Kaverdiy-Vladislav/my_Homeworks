@@ -22,15 +22,12 @@ public class Car implements CarService{
 
 
     @Override
-    public boolean RepairEngine() {
-        System.out.println("Repair engine");
-        return false;
+    public void repair() {
+        System.out.println("Car repairing");
     }
 
     @Override
-    public boolean ReplacementWheels() {
-        System.out.println("ReplacementWheels");
-
-        return false;
+    public void draw() {
+        System.out.println("Car  drawing");
     }
 }

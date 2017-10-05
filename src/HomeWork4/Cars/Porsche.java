@@ -7,11 +7,16 @@ public class Porsche extends Car implements CarService {
     private static int NumberOfCars;
     private static int NumberOfSportCars;
 
-    static{
+    static {
         NumberOfCars = 0;
         NumberOfSportCars = 0;
     }
 
+
+
+    public enum CarType {
+    PORSCHE_911, PORSCHE_Carrera_GT, PORSCHE_Cayenne
+    }
 
     private String color;
     private int speed;
@@ -20,23 +25,51 @@ public class Porsche extends Car implements CarService {
     private String model;
 
 
+    public Porsche() {
 
+    }
 
+    public Porsche(String color, int speed, int weight, int volumeOfMotor, String model) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+        VolumeOfMotor = volumeOfMotor;
+        this.model = model;
+    }
+
+    public Porsche(String color, int speed, int weight, int volumeOfMotor) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+        VolumeOfMotor = volumeOfMotor;
+    }
+
+    public Porsche(String color, int speed, int weight) {
+        this.color = color;
+        this.speed = speed;
+        this.weight = weight;
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public String getColor() {
+
         return color;
     }
 
     public void setColor(String color) {
+
         this.color = color;
     }
 
     public int getSpeed() {
-        if(speed != 0){
+        if (speed != 0) {
 
-    }return speed;
-}
+        }
+        return speed;
+    }
 
-    public Porsche setSpeed(int speed) {
+    public Porsche setSpeed(
+            int speed) {
 
         this.speed = speed;
         return this;
@@ -66,6 +99,7 @@ public class Porsche extends Car implements CarService {
         this.model = model;
         return this;
     }
+
     public Porsche setModel() {
         this.model = "Unknown";
         return this;
@@ -81,6 +115,7 @@ public class Porsche extends Car implements CarService {
     private boolean isCountValid(int speed) {
         return speed >= 0;
     }
+
     public Porsche setManufacturer() {
         this.manufacturer = "Unknown";
         return this;
@@ -91,39 +126,14 @@ public class Porsche extends Car implements CarService {
         this.manufacturer = manufacturer;
         return this;
     }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public Porsche(){
 
-}
-
-    public Porsche(String color, int speed, int weight, int volumeOfMotor, String model) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-        VolumeOfMotor = volumeOfMotor;
-        this.model = model;
-    }
-
-    public Porsche(String color, int speed, int weight, int volumeOfMotor) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-        VolumeOfMotor = volumeOfMotor;
-    }
-
-    public Porsche(String color, int speed, int weight) {
-        this.color = color;
-        this.speed = speed;
-        this.weight = weight;
-    }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @Override
     public void getColor(String s) {
 
         super.getColor("red");
     }
-
 
 
     @Override
@@ -165,17 +175,15 @@ public class Porsche extends Car implements CarService {
         result = 31 * result + model.hashCode();
         return result;
     }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+      @Override
+   public void repair() {
+          System.out.println("Car Porsche repairing");
+}
 
     @Override
-    public boolean RepairEngine() {
-
-        return false;
-    }
-
-    @Override
-    public boolean ReplacementWheels() {
-
-        return false;
+    public void draw() {
+        System.out.println("Car Porsche drawing");
     }
 }
