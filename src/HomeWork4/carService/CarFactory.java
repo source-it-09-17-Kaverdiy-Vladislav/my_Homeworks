@@ -3,10 +3,18 @@ package HomeWork4.carService;
 import HomeWork4.Cars.BMW;
 import HomeWork4.Cars.Car;
 import HomeWork4.Cars.Porsche;
+import HomeWork4.myAbstractFactory.AbstractFactory;
+import HomeWork4.myAbstractFactory.CarColor;
 
-public class CarFactory  {
 
-public Car getCar(String carType){
+public  class CarFactory extends AbstractFactory {
+
+    @Override
+    public CarColor getColor(String color) {
+        return null;
+    }
+
+    public Car getCar(String carType){
 
     if(carType == null){
         return null;
@@ -22,6 +30,9 @@ public Car getCar(String carType){
     }
 
     return null;
+
+
+
 }
 }
 

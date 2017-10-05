@@ -24,10 +24,12 @@ public class Car implements CarService{
     @Override
     public void repair() {
         System.out.println("Car repairing");
+
     }
 
     @Override
     public void draw() {
         System.out.println("Car  drawing");
+
     }
 }
